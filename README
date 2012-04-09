@@ -1,0 +1,7 @@
+This repo consists of 3 code samples:
+
+1) A Java class used to simulate results of a genetics algorithm. (Files: CoalescentSimulator.java)
+
+2) A simple GWT (Google Web Toolkit) app for rating movies. To run it locally, GWT must be set up as dictated in :   . (Files: A MovieRatings folder, which contains an src folder and war folder.)
+
+3) A simple webpage in CSS, HTML and PHP. (Files: TBD)
