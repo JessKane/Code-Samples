@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<movies>
+    {% for movie in movies %}
+    <movie>
+      {% if 'uri' in movie %}
+        <uri>{{ movie['uri'] }}</uri>
+      {% end %}
+      {% if 'title' in movie %}
+        <title>{{ movie['title'] }}</title>
+      {% end %}
+      {% if 'synopsis' in movie %}
+        <synopsis>{{ movie['synopsis'] }}</synopsis>
+      {% end %}
+      {% if 'actors' in movie %}
+      	<actors>
+        	{% for actor in movie['actors'] %}
+        	<actor>{{ actor }}</actor>
+        	{% end %}
+        </actors>
+      {% end %}
+    </movie>
+    {% end %}
+</movies>

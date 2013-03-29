@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<actor>
+    {% if 'uri' in actor %}
+        <uri>{{ actor['uri'] }}</uri>
+    {% end %}
+    {% if 'name' in actor %}
+        <name>{{ actor['name'] }}</name>
+    {% end %}
+    {% if 'birthdate' in actor %}
+        <birthdate>{{ actor['birthdate'] }}</birthdate>
+    {% end %}
+    {% if 'movies' in actor %}
+   		<movies>
+    	{% for movie in actor['movies'] %}
+        	<movie>{{ movie }}</movie>
+        {% end %}
+    	</movies>
+    {% end %}
+</actor>

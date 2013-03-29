@@ -2,6 +2,7 @@ This repo consists of 3 code samples:
 
 1) A Java class used to simulate results of a genetics algorithm. (Files: CoalescentSimulator.java)
 
-2) A simple GWT (Google Web Toolkit) app for rating movies. To run it locally, GWT must be set up as dictated at: https://developers.google.com/web-toolkit/gettingstarted . (Files: A MovieRating folder, which contains an src folder and war folder. If you don't want to run the app, the files MovieRating.java in the src folder and the MovieRating.css and MovieRating.html in the war folder are the most interesting.)
+2) A simple Tornado web server that takes some csv input files about movies and actors, and displays them RESTfully in various file formats (xml, json, ttl). (Files: The main script is located at MovieApp/src/movie_service.py .)
 
-3) An excerpt from a webpage that uses PHP to make SQL calls. Originally part of a photo album website. (Files: albumDisplay.php)
+3) A Java class that takes allows users to search across a set of webpages (dictated in WebSearcher/data/test3.txt), and returns results and snippets from relevant websites using anchor text and PageRank. (Files: The main class is located in WebSearcher/src/WebSearcher.java .)
+

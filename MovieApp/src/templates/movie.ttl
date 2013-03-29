@@ -1,0 +1,16 @@
+@prefix dbpedia: <http://dbpedia.org/> .
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+
+<{{ movie['uri'] }}> a dbpedia-owl:Film;
+ {% if 'synopsis' in movie %}   
+    dbpedia-owl:abstract "{{ movie['synopsis'] }}"; 
+ {% end %}   
+  {% if 'actors' in movie %}{% for actor in movie['actors'] %}
+    dbpedia-owl:starring <{{ actor }}>;
+ {% end %}{% end %} 
+ {% if 'title' in movie %}
+    dbpedia:title {{ movie['title'] }} .
+ {% end %}
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dbpedia="http://dbpedia.org/"
+   xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+
+<rdf:Description rdf:about="{{ actor['uri'] }}">
+	<rdf:type rdf:resource="http://dbpedia.org/Actor"/>
+    {% if 'movies' in actor %}{% for movie in actor['movies'] %}
+	<dbpedia-owl:starring rdf:resource="{{ movie }}"/>
+	{% end %}{% end %}
+    {% if 'birthdate' in actor %}    
+    <dbpedia-owl:birthDate>{{ actor['birthdate'] }}</dbpedia-owl:birthDate>
+    {% end %}
+    {% if 'name' in actor %}
+    <dbpedia-owl:birthName>{{ actor['name'] }}</dbpedia-owl:birthName>
+    {% end %}
+</rdf:Description>
